@@ -45,8 +45,8 @@ declare namespace Layer3{
     interface ILayerOptions{
         id?:string; //设置后1个id只能弹出一次,即界面上永远不会重复.
         type:LayerType,
-        erea:['auto'|string,'auto'|string];  //['800px','600px']
-        title:string,
+        area?:['auto'|string,'auto'|string];  //['800px','600px']
+        title?:string,
         shade?:number; //0.6
         maxmin?:boolean; //允许全屏最小化.
         anim?:number ; //-1===6
@@ -69,6 +69,7 @@ declare namespace Layer3{
         full?:()=>void;  //最大化回调
         min?:()=>void;   //最小化回调
         restore?:()=>void;  //还原回调
+        btn?:string[]
     }
 
     enum IlayerTipDirection{
